@@ -1,0 +1,19 @@
+{
+    "name": "curl it",
+    "description": "PHP Curl Class",
+    "license": "Unlicense",
+    "keywords": [
+        "php", "curl", "class", "api", "api-client", "client", "framework", "http", "http-client", "http-proxy", "json",
+        "php-curl", "php-curl-library", "proxy", "requests", "restful", "web-scraper", "web-scraping", "web-service",
+        "xml"
+    ],
+    "authors": [
+        {
+            "name": "Meeshal k"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "php-curl-class/php-curl-class": "^8.6"
+    }
+}
