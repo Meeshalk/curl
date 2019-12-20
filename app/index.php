@@ -19,7 +19,7 @@
         fclose($log);
       }
       $curl = new Curl();
-      for ($i=0; $i < 12; $i++) {
+      for ($i=0; $i < 25; $i++) {
         $url = "http://www.yad2.co.il/api/pre-load/getFeedIndex/vehicles/private-cars?page=1&compact-req=1&forceLdLoad=true";
         $curl->setOpts([
           CURLOPT_HEADER => TRUE,
