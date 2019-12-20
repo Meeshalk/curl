@@ -8,19 +8,18 @@
     <pre>
 
       <?php
-      set_time_limit(55)
-      for ($i=0; $i < 12; $i++) {
-        require __DIR__ . '/../vendor/autoload.php';
-        function writeLog($s){
-          $log = fopen('acc_log.log', 'a+');
-          if($log != false){
-            fwrite($log, "[".date('Y-m-d H:i:s')."] ".$s.PHP_EOL);
-          }
-          fclose($log);
+      require __DIR__ . '/../vendor/autoload.php';
+      set_time_limit(55);
+      use \Curl\Curl;
+      function writeLog($s){
+        $log = fopen('acc_log.log', 'a+');
+        if($log != false){
+          fwrite($log, "[".date('Y-m-d H:i:s')."] ".$s.PHP_EOL);
         }
-
-        use \Curl\Curl;
-        $curl = new Curl();
+        fclose($log);
+      }
+      $curl = new Curl();
+      for ($i=0; $i < 12; $i++) {
         $url = "http://www.yad2.co.il/api/pre-load/getFeedIndex/vehicles/private-cars?page=1&compact-req=1&forceLdLoad=true";
         $curl->setOpts([
           CURLOPT_HEADER => TRUE,
